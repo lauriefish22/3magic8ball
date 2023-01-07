@@ -13,7 +13,12 @@ const resetBtn = document.getElementById('reset');
 submitButton.addEventListener('click', () => {
     toggleSections();
     const randomInt = Math.floor(Math.random() * answers.length);
+
+    const randomChoice = answers[randomInt];
+    answerP.textContent = randomChoice;
 });
+
+resetBtn.addEventListener('click', () => {});
 
 function toggleSections() {
     promptSection.classList.toggle('hide');
